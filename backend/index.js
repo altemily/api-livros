@@ -1,13 +1,13 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const app = express();
-const livros = require('./livros');
+const livros = require('../backend/livros');
 
 // Configurando o dotenv
 dotenv.config();
 
 // Definindo a porta do servidor
-const port = process.env.PORTA || 3000;
+const port = process.env.PORTA;
 
 // Middleware para interpretar JSON
 app.use(express.json());
